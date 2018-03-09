@@ -1,0 +1,58 @@
+{
+    "name": "npm-template",
+    "version": "0.0.1",
+    "description": "Plantilla para crear componentes en NPM",
+    "main": "build/index.js",
+    "types": "build/index.d.ts",
+    "scripts": {
+        "test": "jest",
+        "test:watch": "jest --watchAll",
+        "build": "npm run test && rimraf ./build && gulp",
+        "prepare": "npm run build",
+        "publish:server": "npm publish"
+    },
+    "keywords": [
+        "TypeScript",
+        "Javascript",
+        "TS",
+        "JS",
+        "Jest",
+        "npm"
+    ],
+    "author": "borsan",
+    "license": "ISC",
+    "devDependencies": {
+        "@types/jest": "^21.1.9",
+        "@types/lodash": "^4.14.92",
+        "babel-core": "^6.26.0",
+        "babel-plugin-lodash": "^3.3.2",
+        "babel-plugin-transform-remove-console": "^6.8.5",
+        "babel-preset-env": "^1.6.1",
+        "babel-preset-minify": "^0.2.0",
+        "gulp": "^3.9.1",
+        "gulp-babel": "^7.0.0",
+        "gulp-sourcemaps": "^2.6.2",
+        "gulp-typescript": "^3.2.3",
+        "jest": "^22.0.4",
+        "lodash": "^4.17.4",
+        "merge2": "^1.2.0",
+        "rimraf": "^2.6.2",
+        "ts-jest": "^22.0.0",
+        "ts-node": "^4.1.0",
+        "typescript": "^2.6.2"
+    },
+    "jest": {
+        "transform": {
+            "^.+\\.tsx?$": "ts-jest"
+        },
+        "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+        "moduleFileExtensions": [
+            "ts",
+            "tsx",
+            "js",
+            "jsx",
+            "json",
+            "node"
+        ]
+    }
+}
